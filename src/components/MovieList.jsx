@@ -3,17 +3,19 @@ import Movie from './Movie'
 
 
 
-function MovieList({ movie }) {
+function MovieList({ movies }) {
 
 
     return (
-        <div className='d-flex justify-content-evenly  ' >
+        <div className='d-flex  flex-wrap  ' >
 
-            {movie.map((movies, index) => (
+            {movies.map((movie, index) => (
                 <Movie  
-                    title={movies.title}
-                    image={movies.image}
-                    description={movies.description}
+
+                key={index}
+                    title={movie.title}
+                    image={movie.image}
+                    description={movie.description}
 
                 />
             ))}
